@@ -1,0 +1,1 @@
+Frontend deployed on Netlify - source is app/index.html and components

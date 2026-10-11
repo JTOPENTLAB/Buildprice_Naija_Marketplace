@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buildprice Naija - Know The Real Price</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>body{font-family:Inter}</style>
+</head>
+<body class="bg-gray-50">
+<header class="bg-white border-b sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-2"><div class="w-10 h-10 bg-green-700 rounded-lg flex items-center justify-center text-white font-black">B</div><div><h1 class="font-black text-lg leading-none">BuildPrice Naija</h1><p class="text-xs text-gray-500">Know the real price</p></div></div>
+<div class="hidden md:flex flex-1 mx-8"><input placeholder="Search Cement, Iron Rod 12 Millimeter, Sandcrete Blocks 9 Inch..." class="w-full bg-gray-100 rounded-full px-5 py-2.5 text-sm"/></div>
+<div class="flex items-center gap-3"><select id="city" class="border rounded-full px-3 py-2 text-sm"><option>Lagos State</option><option>Federal Capital Territory Abuja</option><option>Rivers State Port Harcourt</option><option>Kano State</option><option>Oyo State Ibadan</option></select><button class="bg-yellow-400 px-4 py-2 rounded-full font-bold text-sm">Cart (2)</button></div>
+</div>
+<div class="bg-green-700 text-white text-sm py-2 overflow-hidden"><marquee>🔴 LIVE TODAY: Dangote Portland Limestone Cement 42.5 Grade - 7,800 Naira | BUA Cement 42.5 Grade - 7,500 Naira | Iron Rod 12 Millimeter - 9,200 Naira | Iron Rod 16 Millimeter - 12,500 Naira | Sandcrete Blocks 9 Inch - 550 Naira | Granite 3/4 Inch per Ton - 45,000 Naira | Updated: Today 6AM WAT | Verified Sellers Only | Escrow Protected</marquee></div>
+</header>
+
+<section class="max-w-7xl mx-auto px-4 py-8">
+<div class="grid md:grid-cols-3 gap-6">
+<div class="md:col-span-2 bg-white rounded-2xl p-6 shadow-sm">
+<h2 class="font-bold text-xl mb-4">Live Price Intelligence - No Fake Prices</h2>
+<table class="w-full text-sm">
+<thead class="text-gray-500 border-b"><tr><th class="text-left py-2">Full Material Name</th><th>Lagos</th><th>Abuja</th><th>Trend</th><th>Action</th></tr></thead>
+<tbody id="priceTable">
+<tr class="border-b"><td class="py-3 font-medium">Dangote Portland Limestone Cement 42.5 Grade (50 Kilogram Bag)</td><td>₦7,800</td><td>₦8,400</td><td class="text-red-500">↑ 2.1%</td><td><button class="bg-green-700 text-white px-3 py-1 rounded-full text-xs">Lock Price</button></td></tr>
+<tr class="border-b"><td class="py-3 font-medium">BUA Cement 42.5 Grade (50 Kilogram Bag)</td><td>₦7,500</td><td>₦8,100</td><td class="text-green-600">↓ 1.2%</td><td><button class="bg-green-700 text-white px-3 py-1 rounded-full text-xs">Lock Price</button></td></tr>
+<tr class="border-b"><td class="py-3 font-medium">Iron Rod 12 Millimeter (12 Meter Length)</td><td>₦9,200</td><td>₦9,800</td><td class="text-red-500">↑ 3.4%</td><td><button class="bg-green-700 text-white px-3 py-1 rounded-full text-xs">Lock Price</button></td></tr>
+<tr class="border-b"><td class="py-3 font-medium">Iron Rod 16 Millimeter (12 Meter Length)</td><td>₦12,500</td><td>₦13,200</td><td class="text-red-500">↑ 1.8%</td><td><button class="bg-green-700 text-white px-3 py-1 rounded-full text-xs">Lock Price</button></td></tr>
+<tr class="border-b"><td class="py-3 font-medium">Sandcrete Blocks 9 Inch (Vibrated, 450mm)</td><td>₦550</td><td>₦600</td><td class="text-gray-500">→ Stable</td><td><button class="bg-green-700 text-white px-3 py-1 rounded-full text-xs">Buy</button></td></tr>
+<tr class="border-b"><td class="py-3 font-medium">Granite Stone 3/4 Inch (Per Ton)</td><td>₦45,000</td><td>₦48,000</td><td class="text-green-600">↓ 0.5%</td><td><button class="bg-green-700 text-white px-3 py-1 rounded-full text-xs">Buy</button></td></tr>
+<tr class="border-b"><td class="py-3 font-medium">Sharp Sand (Per Ton)</td><td>₦18,000</td><td>₦20,000</td><td class="text-gray-500">→ Stable</td><td><button class="bg-green-700 text-white px-3 py-1 rounded-full text-xs">Buy</button></td></tr>
+<tr><td class="py-3 font-medium">Ceramic Floor Tiles 60 by 60 Centimeter (Per Square Meter)</td><td>₦8,500</td><td>₦9,200</td><td class="text-red-500">↑ 4%</td><td><button class="bg-green-700 text-white px-3 py-1 rounded-full text-xs">Buy</button></td></tr>
+</tbody>
+</table>
+</div>
+<div class="bg-white rounded-2xl p-6 shadow-sm">
+<h3 class="font-bold mb-3">Buy Now Build Later Calculator</h3>
+<p class="text-sm text-gray-600 mb-3">Lock Cement price today, pay small small. No site abandonment.</p>
+<label class="text-xs">Quantity (Bags of Cement)</label><input id="qty" type="number" value="100" class="w-full border rounded-lg p-2 mb-3">
+<div class="bg-yellow-50 p-3 rounded-lg text-sm"><div class="flex justify-between"><span>Total Today:</span><span id="total">₦780,000</span></div><div class="flex justify-between"><span>Pay Now 30%:</span><span class="font-bold">₦234,000</span></div><div class="flex justify-between"><span>Lock Fee:</span><span>₦2,500</span></div><div class="flex justify-between font-bold mt-2 border-t pt-2"><span>Balance in 3 Installments:</span><span>₦546,000</span></div></div>
+<button class="w-full bg-green-700 text-white py-3 rounded-xl mt-4 font-bold">Lock Price For 30 Days - Paystack Secure</button>
+<p class="text-xs text-center mt-2 text-gray-500">Escrow Protected + Anti-Fake Verification</p>
+</div>
+</div>
+</section>
+
+<section class="max-w-7xl mx-auto px-4">
+<h2 class="font-bold text-xl mb-4">Verified Marketplace - Escrow Protected</h2>
+<div class="grid md:grid-cols-4 gap-4">
+<div class="bg-white rounded-2xl p-4 shadow-sm"><div class="h-32 bg-gray-100 rounded-xl mb-3 flex items-center justify-center">Cement Image</div><span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">✓ Verified Authentic</span><h3 class="font-bold mt-2 text-sm">Dangote Portland Limestone Cement 42.5 Grade</h3><p class="text-xs text-gray-500">Seller: Alaba Building Materials, Corporate Affairs Commission Verified</p><p class="font-black mt-2">₦7,800 <span class="text-xs font-normal text-gray-500">per 50 Kilogram Bag</span></p><button class="w-full mt-2 bg-black text-white py-2 rounded-full text-sm">Add To Cart</button></div>
+<div class="bg-white rounded-2xl p-4 shadow-sm"><div class="h-32 bg-gray-100 rounded-xl mb-3 flex items-center justify-center">Iron Rod</div><span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">✓ Verified Authentic</span><h3 class="font-bold mt-2 text-sm">Iron Rod 12 Millimeter - High Tensile Strength</h3><p class="text-xs text-gray-500">Seller: Dei-Dei Iron Dealers, Verified</p><p class="font-black mt-2">₦9,200 <span class="text-xs font-normal">per 12 Meter Length</span></p><button class="w-full mt-2 bg-black text-white py-2 rounded-full text-sm">Add To Cart</button></div>
+<div class="bg-white rounded-2xl p-4 shadow-sm"><div class="h-32 bg-gray-100 rounded-xl mb-3 flex items-center justify-center">Blocks</div><span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">✓ Verified</span><h3 class="font-bold mt-2 text-sm">Sandcrete Blocks 9 Inch - Vibrated Strong</h3><p class="text-xs text-gray-500">Seller: Ikorodu Block Industry</p><p class="font-black mt-2">₦550 <span class="text-xs font-normal">per Block</span></p><button class="w-full mt-2 bg-black text-white py-2 rounded-full text-sm">Add To Cart</button></div>
+<div class="bg-white rounded-2xl p-4 shadow-sm"><div class="h-32 bg-gray-100 rounded-xl mb-3 flex items-center justify-center">Tiles</div><span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">✓ Verified</span><h3 class="font-bold mt-2 text-sm">Ceramic Floor Tiles 60 by 60 Centimeter - Spanish Design</h3><p class="text-xs text-gray-500">Seller: Onitsha Tile Hub</p><p class="font-black mt-2">₦8,500 <span class="text-xs font-normal">per Square Meter</span></p><button class="w-full mt-2 bg-black text-white py-2 rounded-full text-sm">Add To Cart</button></div>
+</div>
+</section>
+
+<footer class="mt-12 bg-black text-white p-8 text-center"><p class="font-bold">BuildPrice Naija Marketplace - Built for Nigeria, No Fake Materials, No Abbreviations</p><p class="text-sm text-gray-400 mt-2">WhatsApp: +234 810 000 0000 | Support in Pidgin, Yoruba, Hausa, Igbo, English</p></footer>
+<script>
+document.getElementById('qty').addEventListener('input', e=>{let q=e.target.value||0; document.getElementById('total').innerText='₦'+(q*7800).toLocaleString()})
+</script>
+</body>
+</html>

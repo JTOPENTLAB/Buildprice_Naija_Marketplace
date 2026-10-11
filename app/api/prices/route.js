@@ -1,0 +1,1 @@
+import { supabase } from '@/lib/supabase'; export async function GET(req){ const {searchParams}=new URL(req.url); const city=searchParams.get('city')||'Lagos State'; const {data}=await supabase.from('city_prices').select('*').eq('city',city); return Response.json(data); }

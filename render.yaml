@@ -1,0 +1,38 @@
+
+services:
+  - type: web
+    name: buildprice-naija-backend
+    env: node
+    region: singapore
+    plan: starter
+    branch: main
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PAYSTACK_SECRET_KEY
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_KEY
+        sync: false
+      - key: TWILIO_ACCOUNT_SID
+        sync: false
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
+    healthCheckPath: /health
+
+  - type: cron
+    name: price-scraper-daily
+    env: python
+    region: singapore
+    schedule: "0 5 * * *" # 6AM WAT = 5AM UTC
+    buildCommand: pip install -r requirements.txt
+    startCommand: python scripts/price_scraper.py
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
