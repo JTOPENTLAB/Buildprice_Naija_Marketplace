@@ -4,6 +4,9 @@
 [build.environment]
   NODE_VERSION = "22"
 
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
 [[redirects]]
   from = "/api/*"
   to = "https://buildprice-naija-backend.onrender.com/api/:splat"
